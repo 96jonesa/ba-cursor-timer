@@ -4,7 +4,7 @@ A RuneLite plugin that shows how long the current Barbarian Assault wave has bee
 
 - **Accurate to the tick.** The timer counts game ticks rather than wall-clock time, so it moves in exact 0.6 second steps in lockstep with the server: `0.0`, `0.6`, `1.2`, … It shows seconds and tenths only and never rolls over into minutes (`9.6`, `10.2`, … `99.6`, `100.2`).
 - **Same wave as the Barbarian Assault plugin.** The timer starts on the `---- Wave: N ----` game message and stops when you leave the wave (completing it, dying or exiting), on the same signals the built-in Barbarian Assault plugin uses for its "Wave N duration" chat message. It also stops on logout or world hop.
-- **Follows the cursor.** It is drawn above interfaces, level with the cursor and to its right by default, and hidden while the cursor is outside the game window.
+- **Follows the cursor.** It is drawn on top of everything, including interfaces and the right-click menu, level with the cursor and to its right by default, and hidden while the cursor is outside the game window.
 
 ## Config
 
@@ -13,6 +13,12 @@ A RuneLite plugin that shows how long the current Barbarian Assault wave has bee
 | Text color | white | Color of the wave timer |
 | Horizontal offset | 16 | Pixels right of the cursor to draw the timer |
 | Vertical offset | 0 | Pixels below the cursor to draw the timer |
+| Font | RuneScape | RuneScape, RuneScape Small, Sans-serif, Serif, or Monospaced |
+| Bold | on | Draw the timer in bold |
+| Font size | 16 | Size of the timer text (16 is the game's normal size) |
+| Background | off | Draw a rectangle directly behind the timer |
+| Background color | black | Color of the rectangle |
+| Background opacity | 50% | Opacity of the rectangle, from 0% (invisible) to 100% (solid) |
 
 ## Development
 

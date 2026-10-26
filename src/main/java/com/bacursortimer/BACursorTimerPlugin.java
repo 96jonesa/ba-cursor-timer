@@ -64,7 +64,10 @@ public class BACursorTimerPlugin extends Plugin
 	{
 		if (event.getType() == ChatMessageType.GAMEMESSAGE && event.getMessage().startsWith(WAVE_START_PREFIX))
 		{
-			waveClock.start(client.getTickCount());
+			// Counting from the message's own tick reads one tick ahead of the wave
+			// (checked in game), so the wave's first tick is the one after it.
+			// The clock reads 0.0 until then.
+			waveClock.start(client.getTickCount() + 1);
 		}
 	}
 
